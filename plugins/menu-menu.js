@@ -30,24 +30,23 @@ let more = String.fromCharCode(8206)
 let readMore = more.repeat(850) 
 let datcov = await fetch('https://latam-api.vercel.app/api/covid19?apikey=nekosmic&q=world');
 	let CovidApi = await datcov.json();
-	var cotext = `┏「 DATOS - COVID19 」┓
-┃➲ Casos positivos : ${CovidApi.casos}
-┃✯ Recuperados : ${CovidApi.recuperados}
-┃❥ Tratados : ${CovidApi.activo}
-┃✞ Fallecidos : ${CovidApi.muertes}
-┃⍟𝗦𝗵𝗶𝘇𝘂 » 𝗕𝗼𝘁⍟ V5.3
-┗─━─━「 🌎 」━─━─┛\n\n`
+	var cotext = `┏─━─━「 DATOS - COVID19 」─━─━┓
+┃━⋄≼ Casos positivos : ${CovidApi.casos}
+┃━⋄≼ Recuperados : ${CovidApi.recuperados}
+┃━⋄≼ Tratados : ${CovidApi.activo}
+┃━⋄≼ Fallecidos : ${CovidApi.muertes}
+┃━⋄≼ 𝐒𝐇𝐀𝐖𝐀𝐙𝐀-𝐁𝐎𝐓
+┗─━─━「 DATOS - COVID19 」━─━─┛\n\n`
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let str = `
 ╭══〘 ✯✯✯✯✯✯✯✯ 〙═╮
-║    ◉— *𝚂𝙷𝙸𝚉𝚄 - 𝙱𝙾𝚃* —◉
+║◉— 𝕊ℍ𝔸𝕎𝔸ℤ𝔸-𝔹𝕆𝕋 —◉
 ║≡≡≡≡≡≡≡≡≡≡≡≡≡≡
 ║➤ *𝗛ola, ${taguser}*
 ║≡≡≡≡≡≡≡≡≡≡≡≡≡≡
-║➤ *Owner:* Shizu-Hub
-║➤ *Numero:* wa.me/34623442554
-║➤ *Bot ofc:* wa.me/5492615130362
-║➤ *PayPal:* https://www.paypal.me/NeKosmicOFC
+║➤ *Owner:* 𝚂𝙰𝚈𝙴𝙳-𝚂𝙷𝙰𝚆𝙰𝚉𝙰
+║➤ *Numero:* wa.me/201145624848
+║➤ *Bot ofc:* wa.me/201211251108
 ║➤ *Fecha:* ${date}
 ║➤ *Tiempo activo:* ${uptime}
 ║➤ *Usuarios:* ${rtotalreg}
@@ -583,8 +582,8 @@ ${readMore}
 ┗━━━━━━━━━━━━━┛
 `.trim()
 let buttons = [
-{ buttonId: '#redes', buttonText: { displayText: '⍟𝗥𝗘𝗗𝗘𝗦⍟' }, type: 1 },
-{ buttonId: '#gruposofc', buttonText: { displayText: '⍟𝗚𝗥𝗨𝗣𝗢𝗦⍟' }, type: 1 }]
+{ buttonId: '#redes', buttonText: { displayText: '𝗥𝗘𝗗𝗘𝗦' }, type: 1 },
+{ buttonId: '#gruposofc', buttonText: { displayText: '𝗚𝗥𝗨𝗣𝗢𝗦' }, type: 1 }]
 //{ buttonId: '#infobot', buttonText: { displayText: '🐾 𝙸𝙽𝙵𝙾𝙱𝙾𝚃 🐾' }, type: 1 }]
 let buttonMessage = {
 image: imagen1,
@@ -599,17 +598,17 @@ externalAdReply: {
 showAdAttribution: true,
 mediaType: 'VIDEO',
 mediaUrl: null,
-title: '👑 𝗦𝗛𝗜𝗭𝗨 » 𝗕𝗢𝗧 👑',
+title: '𝐒𝐇𝐀𝐖𝐀𝐙𝐀-𝐁𝐎𝐓',
 body: null,
 thumbnail: img,
-sourceUrl: `https://chat.whatsapp.com/LwPNmhUV8P76isIyFgEK8E`
+sourceUrl: `wa.me/201145624848`
 }}}
 conn.sendMessage(m.chat, buttonMessage, { quoted: m })
 //await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, { type: 'audioMessage', ptt: true})
 } catch {
 conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝚈 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙴𝙽𝚅𝙸𝙰𝚁𝙻𝙾, 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃*', m)
 }}
-handler.command = /^(allmenu)$/i
+handler.command = /^(allmenu|منيو)$/i
 handler.exp = 50
 handler.fail = null
 export default handler
