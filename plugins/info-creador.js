@@ -2,27 +2,26 @@ let handler = async (m, { conn, usedPrefix }) => {
 var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.presentation','vnd.openxmlformats-officedocument.spreadsheetml.sheet','vnd.openxmlformats-officedocument.wordprocessingml.document']
 var document = doc[Math.floor(Math.random() * doc.length)]    
 let text = `
-*—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴 𝙼𝙸 𝙲𝚁𝙴𝙰𝙳𝙾𝚁 𝙴𝚂 wa.me/34623442554*
-
-*—◉ 𝙴𝙻 𝙽𝚄𝙼𝙴𝚁𝙾 𝙳𝙴𝙻 𝙲𝙾𝙻𝙰𝙱𝙾𝚁𝙰𝙳𝙾𝚁 𝙴𝚂 wa.me/15082939236*
+*—◉ 𝗦𝗔𝗬𝗘𝗗-𝗦𝗛𝗔𝗪𝗔𝗭𝗔 ◉—*
+*wa.me/+201145624848*
 `.trim()   
 let buttonMessage= {
-'document': { url: `https://github.com/Shizu-Hub/Shizu-Bot` },
+'document': { url: `wa.me/+201145624848` },
 'mimetype': `application/${document}`,
-'fileName': `「  𝑯𝒆𝒍𝒍𝒐 𝑾𝒐𝒓𝒍𝒅 」`,
+'fileName': `「  𝕊ℍ𝔸𝕎𝔸ℤ𝔸-𝔹𝕆𝕋 」`,
 'fileLength': 99999999999999,
 'pageCount': 200,
 'contextInfo': {
 'forwardingScore': 200,
 'isForwarded': true,
 'externalAdReply': {
-'mediaUrl': 'https://github.com/Shizu-Hub/Shizu-Bot',
+'mediaUrl': 'wa.me/+201145624848',
 'mediaType': 2,
 'previewType': 'pdf',
-'title': 'ᴇʟ ᴍᴇᴊᴏʀ ʙᴏᴛ ᴅᴇ ᴡʜᴀᴛsᴀᴘᴘ⁩',
+'title': '𝐒𝐇𝐀𝐖𝐀𝐙𝐀-𝐁𝐎𝐓',
 'body': wm,
 'thumbnail': imagen1,
-'sourceUrl': 'https://www.youtube.com/channel/UCSTDMKjbm-EmEovkygX-lCA' }},
+'sourceUrl': 'wa.me/+201145624848' }},
 'caption': text,
 'footer': wm,
 'buttons':[
@@ -37,5 +36,5 @@ await conn.sendContact(m.chat, data.map(([id, name]) => [id, name]), m)
 }
 handler.help = ['owner', 'creator']
 handler.tags = ['info']
-handler.command = /^(owner|creator|creador|propietario)$/i
+handler.command = /^(owner|creator|مطور|المالك)$/i
 export default handler
